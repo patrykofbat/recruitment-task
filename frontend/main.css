@@ -1,0 +1,38 @@
+#user-from-container{
+    display: flex;
+    justify-content: center;
+}
+
+#user-from {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #e0e0d2;
+    border-radius: .4rem;
+    padding: 1.2rem;
+    width: 30rem;
+    max-height: 85%;
+    margin-top: 2rem;
+    min-width: 0;
+}
+
+#user-from > input {
+    font-size: 1.3rem;
+    padding-left: 7px;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    height: 3rem;
+    border: 1px solid #a8a8a8;
+
+}
+
+#user-from > input[type=submit]:hover {
+    background-color: #d0d0c1
+}
+
+#pop-up {
+    display:none;
+    background-color:red;
+    z-index: 1;
+}
