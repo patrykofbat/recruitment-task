@@ -6,10 +6,21 @@ window.onload = () => {
     form.onsubmit = (event) => {
         event.preventDefault();
         let formHandler = new FormHandler(form);
-        let formData = formHandler.parseToObject();
-        console.log(formData);
-        let popUp = document.getElementById("pop-up");
-        popUp.style.display= "flex";
+        let formJson = formHandler.parseToJson();
+        if(formJson){
+            fetch("http://localhost/backend/index.php", {
+                method:"POST",
+                mode: "cors",
+                cache: "no-cache",
+                body: formHandler.formData
+            }).then(response=>response.json())
+        }
+        else{
+            Object.keys(formHandler.errors).forEach((key, index)=>{
+                document.getElementById(key+"-error").innerHTML = formHandler.errors[key];
+            });
+            
+        }
         
 
     } 

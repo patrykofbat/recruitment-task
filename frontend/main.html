@@ -18,20 +18,30 @@
 
         <div id="user-from-container">
             <form id="user-from">
-                <label>Imię: </label>
-                <input type="text" id="name"/>
 
-                <label>Nazwisko: </label>
-                <input type="text" id="surrname"/>
+                <label>Login: </label>
+                <input type="text" id="login" name="login"/>
+                <span id="login-error"></span>
+                
 
                 <label>Hasło: </label>
-                <input type="password" id="password"/>
-
+                <input type="password" id="password" name="password"/>
+                <span id="password-error"></span>
+    
                 <label>Powtórz hasło: </label>
-                <input type="password" id="re-password"/>
+                <input type="password" id="rePassword" name="rePassword"/>
+                <span id="rePassword-error"></span>
+
+                <label>Imię: </label>
+                <input type="text" id="name" name="name"/>
+                <span id="name-error"></span>
+
+                <label>Nazwisko: </label>
+                <input type="text" id="surrname" name="surrname"/>
 
                 <label>Dodaj plik: </label>
-                <input type="file" id="fileinput" />
+                <input type="file" id="file" name="file"/>
+                <span id="file-error"></span>
 
                 <input type="submit" id="submit" value="Wyślij"/>
             </form>

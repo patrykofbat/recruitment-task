@@ -19,7 +19,7 @@
 #user-from > input {
     font-size: 1.3rem;
     padding-left: 7px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     border-radius: 0.4rem;
     box-sizing: border-box;
     height: 3rem;
@@ -29,6 +29,11 @@
 
 #user-from > input[type=submit]:hover {
     background-color: #d0d0c1
+}
+
+#user-from > span {
+    color:red;
+    font-size: 0.8rem;
 }
 
 #pop-up {
