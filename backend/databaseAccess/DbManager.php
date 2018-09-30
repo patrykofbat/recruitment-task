@@ -39,6 +39,11 @@ class DbManager {
         }
     }
 
+    public function selectLastId($tableName){
+        $result = $this->dbConn->query("SELECT MAX(id) FROM {$tableName}");
+        return $result->fetch_assoc()['MAX(id)'];
+    }
+
     public function selectAll($tableName){
         $ar = array();
         $result = $this->dbConn->query("SELECT * FROM {$tableName}");

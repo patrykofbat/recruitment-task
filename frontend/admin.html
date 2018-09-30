@@ -2,27 +2,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="admin.css">
 <script type="module" src="admin.js"></script>
 <title>Strona Główna</title>
 </head>
 
 <body>
     <div id="container">
-        <form id="user-from">
 
-            <label>Login: </label>
-            <input type="text" id="login" name="login"/>
+        <div id="admin-form-container">
+            <form id="admin-form" method="POST" action="../backend/admin.php">
 
-            <label>Password: </label>
-            <input type="password" id="password" name="password"/>
+                <label>Login: </label>
+                <input type="text" id="login" name="login"/>
 
-            <input type="submit" id="submit" value="Zaloguj"/>
+                <label>Password: </label>
+                <input type="password" id="password" name="password"/>
 
-            <span id="error"></span>
-        </form>
+                <input type="submit" id="submit" value="Zaloguj"/>
+
+                <span id="error"></span>
+            </form>
+        </div>
     </div>
         
-    </div>
 </body>
 
 </html>

@@ -22,9 +22,11 @@ $phpFileUploadErrors = array(
 if(!empty($_POST['name'])){
     $newUser = new User($_POST['name'], $_POST['surrname'], $file['name']);
     $dbManager = new DbManager();
+    $lastID = $dbManager->selectLastId('users');
+    mkdir('./images/'.($lastID+1).'/');
 
     if($file['error'] == 0){
-        if($dbManager->execute($newUser->parseInsertQuery('users')) && move_uploaded_file($file['tmp_name'], './images/'.$file['name'])){
+        if(move_uploaded_file($file['tmp_name'], './images/'.($lastID+1).'/'.$file['name'])&& $dbManager->execute($newUser->parseInsertQuery('users'))){
             echo "Wpis dodany pomyślnie";
         }
         else {

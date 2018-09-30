@@ -1,9 +1,9 @@
-#user-from-container{
+#admin-form-container{
     display: flex;
     justify-content: center;
 }
 
-#user-from {
+#admin-form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -11,12 +11,12 @@
     border-radius: .4rem;
     padding: 1.2rem;
     width: 30rem;
-    max-height: 85%;
+    max-height: 100%;
     margin-top: 2rem;
     min-width: 0;
 }
 
-#user-from > input {
+#admin-form > input {
     font-size: 1.3rem;
     padding-left: 7px;
     margin-bottom: 0.5rem;
@@ -25,29 +25,4 @@
     height: 3rem;
     border: 1px solid #a8a8a8;
 
-}
-
-#user-from > input[type=submit]:hover {
-    background-color: #d0d0c1
-}
-
-#user-from > span {
-    color:red;
-    font-size: 0.8rem;
-}
-
-#pop-up {
-    display:none;
-    position: absolute;
-    width:50%;
-    height: 50%;
-    top: 25%;
-    left:25%;
-    background-color:red;
-    border-radius: 0.4rem;
-    z-index: 1;
-}
-
-#pop-up > span {
-    color:rgb(52, 231, 52);
 }
