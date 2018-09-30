@@ -38,6 +38,12 @@
 
 #pop-up {
     display:none;
+    position: absolute;
+    width:50%;
+    height: 50%;
+    top: 25%;
+    left:25%;
     background-color:red;
+    border-radius: 0.4rem;
     z-index: 1;
 }

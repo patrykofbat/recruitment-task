@@ -26,15 +26,9 @@ export default class FormHandler {
     validate(data){
         let fileFormat = /.+\.jpg|jpeg|png/;
 
-        if(!data.login)
-            this.errors.login = "Pole nie może być puste";
-        if(!data.password)
-            this.errors.password = "Pole nie może być puste";
-        if(data.password !== data.rePassword)
-            this.errors.rePassword = "Hasła nie są identyczne";
         if(!data.name)
             this.errors.name = "Pole nie może być puste";
-        if(!fileFormat.test(data.file))
+        if(!fileFormat.test(data.file) && data.file.length !== 0)
             this.errors.file = "Dozwolony format pliku to jpg, jpeg, png";
         
     }

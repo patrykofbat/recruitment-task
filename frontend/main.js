@@ -13,7 +13,15 @@ window.onload = () => {
                 mode: "cors",
                 cache: "no-cache",
                 body: formHandler.formData
-            }).then(response=>response.json())
+            }).then(response => {return response.text()})
+                .then(text=>{
+                    let popUp = document.getElementById("pop-up");
+                    popUp.style.display="flex"
+                    document.getElementById("message").innerHTML = text;
+                    document.getElementById("exit-pop-up").onclick = (event) =>{
+                        popUp.style.display="none";
+                    }
+                });
         }
         else{
             Object.keys(formHandler.errors).forEach((key, index)=>{
