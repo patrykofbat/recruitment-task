@@ -30,15 +30,15 @@ if(!empty($_POST['login']) && !empty($_POST['password'])){
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="../frontend/admin.css">
 <title>Strona Główna</title>
 </head>
 
 <body>
     <div id="container">
 
-        <table>
-            <tr>
+        <table id ="user-table">
+        <tr>
             <th>Imię</th>
             <th>Nazwisko</th> 
             <th>Obraz</th>

@@ -16,7 +16,7 @@
     min-width: 0;
 }
 
-#admin-form > input {
+#admin-form input {
     font-size: 1.3rem;
     padding-left: 7px;
     margin-bottom: 0.5rem;
@@ -25,4 +25,30 @@
     height: 3rem;
     border: 1px solid #a8a8a8;
 
+}
+
+#user-table{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+#user-table td, #user-table th {
+    border: 1px solid #ddd;
+    padding: 7px;
+}
+
+
+#user-table tr:nth-child(even){
+    background-color: #a8a8a8;
+}
+
+#user-table tr:hover {background-color: #ddd;}
+
+#user-table th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: rgb(76, 99, 175);
+    color: white;
 }

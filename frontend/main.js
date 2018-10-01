@@ -16,10 +16,16 @@ window.onload = () => {
             }).then(response => {return response.text()})
                 .then(text=>{
                     let popUp = document.getElementById("pop-up");
-                    popUp.style.display="flex"
-                    document.getElementById("message").innerHTML = text;
+                    let message = document.getElementById("message");
+                    popUp.style.display="flex";
+                    if(text !== "Wpis dodany pomyślnie"){
+                        message.style.color = "red";
+                    }
+                    message.innerHTML = text;
                     document.getElementById("exit-pop-up").onclick = (event) =>{
+                        event.stopPropagation();
                         popUp.style.display="none";
+                        
                     }
                 });
         }

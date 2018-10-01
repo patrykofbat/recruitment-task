@@ -16,7 +16,7 @@
     min-width: 0;
 }
 
-#user-from > input {
+#user-from input {
     font-size: 1.3rem;
     padding-left: 7px;
     margin-bottom: 0.5rem;
@@ -27,7 +27,7 @@
 
 }
 
-#user-from > input[type=submit]:hover {
+#user-from input[type=submit]:hover {
     background-color: #d0d0c1
 }
 
@@ -39,15 +39,43 @@
 #pop-up {
     display:none;
     position: absolute;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 1%;
     width:50%;
-    height: 50%;
+    height: 25%;
     top: 25%;
-    left:25%;
-    background-color:red;
+    left:24%;
+    background-color:#e4e4e4;
     border-radius: 0.4rem;
     z-index: 1;
 }
 
-#pop-up > span {
+#pop-up span {
     color:rgb(52, 231, 52);
+    text-align: center;
+    margin-bottom: 25%;
 }
+
+#pop-up button {
+    height: 5%;
+    background-color: #e4e4e4;
+    color:#8f8f8f;
+    border: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: right;
+}
+
+#pop-up button:hover{
+    color:#646464;
+}
+
+#pop-up button:focus{
+    outline: 0;
+}
+
+#body :not(#pop-up){
+    filter: blur(2px);    
+}    
