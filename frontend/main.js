@@ -8,7 +8,7 @@ window.onload = () => {
         let formHandler = new FormHandler(form);
         let formJson = formHandler.parseToJson();
         if(formJson){
-            fetch("http://localhost/backend/index.php", {
+            fetch(window.location.protocol + '//' + window.location.host + "/backend/index.php", {
                 method:"POST",
                 mode: "cors",
                 cache: "no-cache",
